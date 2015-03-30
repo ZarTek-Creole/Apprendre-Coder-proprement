@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="client-firefox client-firefox-1 client-gecko client-win" dir="ltr" lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Coder proprement - Communaute francophone sur les Eggdrops</title>
+<meta name="generator" content="MediaWiki 1.17.0">
+<link rel="shortcut icon" href="http://wiki.eggdrop.fr/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.eggdrop.fr/opensearch_desc.php" title="Communaute francophone sur les Eggdrops (fr)">
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.eggdrop.fr/api.php?action=rsd">
+<link title="Creative Commons" type="application/rdf+xml" href="http://wiki.eggdrop.fr/index.php?title=Coder_proprement&amp;action=creativecommons" rel="meta">
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Communaute francophone sur les Eggdrops" href="http://wiki.eggdrop.fr/index.php?title=Sp%C3%A9cial:Modifications_r%C3%A9centes&amp;feed=atom">
+<link rel="stylesheet" href="index_fichiers/load_002.css">
+<link rel="stylesheet" href="index_fichiers/main.css" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content=""><link rel="stylesheet" href="index_fichiers/load.css">
+<link rel="stylesheet" href="index_fichiers/load.css">
+<link rel="stylesheet" href="index_fichiers/load.css">
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Coder_proprement skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Coder proprement</h1>
+	<div id="bodyContent">
+		<div id="siteSub">Un article de Communaute francophone sur les Eggdrops.</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<p><i>Je vous propose ce soir un petit tuto, car en relisant certains 
+scripts je me dis que parfois ce serait pas du luxe. Je suis, bien sur, 
+ouvert à toute remarque constructive, sachez cependant que je lyncherai 
+personnellement toute personne qui remettrait en cause se que j'écris 
+(et les fautes d'orthographe que vous pourriez penser voir ne sont que 
+révélatrices de votre ignorance des subtiles exceptions de notre si 
+belle langue)</i> -- Mareo
+</p><p>N.B. La consommation excessive de café peut nuire à votre santé et à celle des nerfs de votre entourage.
+</p>
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Sommaire</h2> <span class="toctoggle">[<a href="#" class="internal" id="togglelink">masquer</a>]</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Travaux_Pr.C3.A9liminaires"><span class="tocnumber">1</span> <span class="toctext">Travaux Préliminaires</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Avant_de_commencer_.C3.A0_coder_.28pensez_.C3.A0_pr.C3.A9parer_du_caf.C3.A9.29"><span class="tocnumber">1.1</span> <span class="toctext">Avant de commencer à coder (pensez à préparer du café)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Avant_de_commencer_.C3.A0_penser_.C3.A0_coder_.28en_pr.C3.A9parant_le_caf.C3.A9.29"><span class="tocnumber">1.2</span> <span class="toctext">Avant de commencer à penser à coder  (en préparant le café)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#La_namespace_.C3.A7a_explose_tout_.28sauf_les_tasses_de_caf.C3.A9.29"><span class="tocnumber">1.2.1</span> <span class="toctext">La namespace ça explose tout (sauf les tasses de café)</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Un_script_qui_se_d.C3.A9sinstalle_tout_seul_c.27est_de_bon_gout_.28mais_moins_que_celui_du_caf.C3.A9.29"><span class="tocnumber">1.2.2</span> <span class="toctext">Un script qui se désinstalle tout seul c'est de bon gout (mais moins que celui du café)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#En_plein_dans_le_feu_de_l.27action_.21"><span class="tocnumber">2</span> <span class="toctext">En plein dans le feu de l'action&nbsp;!</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Pendant_que_vous_commencez_.C3.A0_coder_.28en_buvant_le_caf.C3.A9.29"><span class="tocnumber">2.1</span> <span class="toctext">Pendant que vous commencez à coder (en buvant le café)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#80_.28caf.C3.A9s.29_-_Une_limite_.C3.A0_ne_pas_d.C3.A9passer"><span class="tocnumber">2.1.1</span> <span class="toctext">80 (cafés) - Une limite à ne pas dépasser</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#TCL_en_langage_qui_ne_poss.C3.A8de_pas_de_typage_.28.C3.A7a_c.27est.29_fort_.28de_caf.C3.A9.29"><span class="tocnumber">2.1.2</span> <span class="toctext">TCL en langage qui ne possède pas de typage (ça c'est) fort (de café)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></tbody></table>
+<h1> <span class="mw-headline" id="Travaux_Pr.C3.A9liminaires">Travaux Préliminaires</span></h1>
+<p>(note&nbsp;: ne pas retirer "Travaux")
+</p><p>Bon cette partie recense tout ce qu'il va vous falloir faire 
+avant de commencer à penser à comment vous allez hypothétiquement 
+initier un processus d'activation des zones de votre cerveau impliqué 
+dans ce que nous appelons communément <i>la programmation</i>.
+Vous êtes bien sur libre de ne pas faire ce qui y est indiqué à 
+condition de suivre très précisément ce que j'y énonce (vous voyez hein,
+ je vous laisse le choix ^^)
+</p>
+<h2> <span class="mw-headline" id="Avant_de_commencer_.C3.A0_coder_.28pensez_.C3.A0_pr.C3.A9parer_du_caf.C3.A9.29">Avant de commencer à coder (pensez à préparer du café)</span></h2>
+<p>Choisissez un nom évocateur pour votre script c'est toujours utile.
+Faites une petit cadre tendance de commentaires en haut de votre script 
+afin d'indiquer le nom du script, son ou ses auteurs (et leurs emails), 
+son utilité, éventuellement sa version et un petit changelog, bugs 
+connus, à faire, etc.
+Le tout ne dépassant idéalement pas les 80 colonnes, j'y reviendrai un 
+peu plus tard.
+</p><p>Un bon exemple serait&nbsp;:
+</p>
+<pre class="tcl"><span style="color: #808080; font-style: italic;">################################################################################</span><br><span style="color: #808080; font-style: italic;"># script.tcl v18.0 par Mareo (mareoh@gmail.com)                                #</span><br><span style="color: #808080; font-style: italic;"># LICENSE&nbsp;: GNU GPLv3 (lien vers le texte de la license qui passe pas)         #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#           Encodage&nbsp;: UTF-8      Taille des tabulations&nbsp;: 6 colonnes          #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;">#                                  Description                                 #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;"># Ce script est juste là pour servir d'exemple à mon tuto...                   #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;">#                              /!\ Attention /!\                               #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;">#           Une version de TCL supérieure ou égale à 8.5 est requise           #</span><br><span style="color: #808080; font-style: italic;">#              pour que ce script puisse fonctionner correctement.             #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#                    (c'est bien d'indiquer la raison ici)                     #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;">#                                 Installation                                 #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;"># Ajoutez à la fin du fichier 'eggdrop.conf' l'instruction suivante&nbsp;:          #</span><br><span style="color: #808080; font-style: italic;">#  source -encoding utf-8 "chemin/vers/script.tcl"                             #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;"># Vous pouvez également modifier quelques options plus bas                     #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;"># [ TODO ]                                                                     #</span><br><span style="color: #808080; font-style: italic;">#  - Faire un vrai script                                                      #</span><br><span style="color: #808080; font-style: italic;">#  - Faire du café                                                             #</span><br><span style="color: #808080; font-style: italic;">#  - Taper Artix                                                               #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;"># [ CHANGES ]                                                                  #</span><br><span style="color: #808080; font-style: italic;">#  * 24/03/2010 v18.0                                                          #</span><br><span style="color: #808080; font-style: italic;">#      Correction d'un bug qui empêchait de voter.                             #</span><br><span style="color: #808080; font-style: italic;">#      Ajout d'une fonction pour remplir sa fiche d'imposition.                #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#  [...] (plein de truc mais on s'en fiche)                                    #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#  * 24/03/1992 v1.0                                                           #</span><br><span style="color: #808080; font-style: italic;">#      Première version stable.                                                #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">#  * 24/06/1991 v0.1                                                           #</span><br><span style="color: #808080; font-style: italic;">#      Début du developpement.                                                 #</span><br><span style="color: #808080; font-style: italic;">#                                                                              #</span><br><span style="color: #808080; font-style: italic;">################################################################################</span></pre>
+<p>Bon vous êtes pas obliger de raconter votre vie comme je le fais, 
+mais si votre script est conséquent c'est toujours bien de faire un truc
+ informatif,
+la longueur des tabulation et l'encodage ça aide vraiment les gens qui 
+vous relisent, alors si vous connaissez ces infos hésitez pas à les 
+mettre.
+</p><p>Bon ceci fait passons à un autre incontournable, j'ai nommé le <b>namespace</b>
+</p>
+<h2> <span class="mw-headline" id="Avant_de_commencer_.C3.A0_penser_.C3.A0_coder_.28en_pr.C3.A9parant_le_caf.C3.A9.29">Avant de commencer à penser à coder  (en préparant le café)</span></h2>
+<h3> <span class="mw-headline" id="La_namespace_.C3.A7a_explose_tout_.28sauf_les_tasses_de_caf.C3.A9.29">La namespace ça explose tout (sauf les tasses de café)</span></h3>
+<p>Certaines personnes aiment bien nommer leurs procédures 
+"script:action", outre le fait que ça fait un nom à rallonge, c'est pas 
+très judicieux, en effet autant utiliser correctement les outils que 
+nous avons à notre disposition.
+Pour rappel, voici <a href="http://wiki.eggdrop.fr/Namespace" title="Namespace">la page du manuel sur les namespace</a>
+</p><p>Pour ça c'est très simple, il suffit de mettre son script entre&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<span style="color: black;">(</span>ton script qui déchire grave<span style="color: black;">)</span><br><span style="color: black;">}</span></pre>
+<p>Et magie tout fonctionne&nbsp;! Ça va être très pratique quand nous aborderont la désinstallation du script&nbsp;:)
+</p><p>En attendant, il faut juste penser à inclure le chemin complet des commandes dans les bind, exemple&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> irc_uneputaindeproc <span style="color: black;">{</span> s_nick s_uhost s_hand s_chan s_msg <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<span style="color: black;">(</span>un putain de code<span style="color: black;">)</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> PUBM - <span style="color: #483d8b;">"*"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">irc_uneputaindeproc</span><br>	<span style="color: black;">(</span>ou<span style="color: black;">)</span><br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> PUBM - <span style="color: #483d8b;">"*"</span> script::<span style="color: black;">irc_uneputaindeproc</span><br><span style="color: black;">}</span></pre>
+<p>Si vous oubliez le [namespace current]:: ou le script:: ça risque pas
+ de marcher, vous pouvez choisir l'un ou l'autre. Ma préférence va pour 
+le [namespace current]:: ça facilite la vie si vous modifiez le nom du 
+namespace.
+</p><p>!! Attention subtilité&nbsp;!!
+</p><p>Si vous voulez accéder à des variable globale, il ne faudra plus utiliser <b>global</b> mais <b>variable</b> qui s'emploie un peu différemment&nbsp;:
+</p><p>Sans namespace&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> s_boisson <span style="color: #483d8b;">"cafééééé"</span><br><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> s_supplement <span style="color: #483d8b;">"au lait&nbsp;!"</span><br>&nbsp;<br><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> boire <span style="color: black;">{</span> <span style="color: black;">}</span> <span style="color: black;">{</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/global.htm"><span style="color: #ff7700;font-weight:bold;">global</span></a> s_boisson s_supplement<br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/return.htm"><span style="color: #ff7700;font-weight:bold;">return</span></a> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #ff3333;">$s_boisson</span> <span style="color: #ff3333;">$s_supplement</span><span style="color: black;">]</span><br><span style="color: black;">}</span></pre>
+<p>Avec un namespace&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"::bar"</span> <span style="color: black;">{</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> s_boisson <span style="color: #483d8b;">"cafééééé"</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> s_supplement <span style="color: #483d8b;">"au lait&nbsp;!"</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> boire <span style="color: black;">{</span> <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/variable.htm"><span style="color: #ff7700;font-weight:bold;">variable</span></a> s_boisson<br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/variable.htm"><span style="color: #ff7700;font-weight:bold;">variable</span></a> s_supplement<br>&nbsp;<br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/return.htm"><span style="color: #ff7700;font-weight:bold;">return</span></a> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #ff3333;">$s_boisson</span> <span style="color: #ff3333;">$s_supplement</span><span style="color: black;">]</span><br>	<span style="color: black;">}</span><br><span style="color: black;">}</span></pre>
+<p>Eh oui, <b>variable</b> ne s'utilise qu'une fois par variable, 
+contrairement à global. Si vous vous dites que ça vous fait trop de 
+ligne au début de votre procédure, c'est que vous utilisez trop de 
+variables globales, et ça c'est mal&nbsp;!
+</p>
+<h3> <span class="mw-headline" id="Un_script_qui_se_d.C3.A9sinstalle_tout_seul_c.27est_de_bon_gout_.28mais_moins_que_celui_du_caf.C3.A9.29">Un script qui se désinstalle tout seul c'est de bon gout (mais moins que celui du café)</span></h3>
+<p>Ah vous n'en avez pas rêvé&nbsp;? Supprimer un petit "source" de 
+votre eggdrop.conf et faire ainsi disparaitre toute trace du script 
+correspondant au rehash. Et bien c'est possible et sans trop 
+d'effort&nbsp;! C'est par ailleurs l'une des première chose à faire 
+après avoir construit votre namespace. Il existe plusieurs façons de 
+procéder, une très simple et une un peu plus complexe, comptez une ou 
+deux TdC (Tasse de Café, unité de temps de tout codeur qui se respecte) 
+supplémentaire tout au plus.
+</p><p>L'astuce consiste à utiliser l'évènement <i>prerehash</i> qui est
+ généré juste avant un rehash couplée à namespace delete qui supprime un
+ namespace et tout son contenu (variables, procédures). Cependant, tout 
+ce qui n'est pas lié au namespace est conservé, ce qui sur un eggdrop 
+inclut binds et timers qu'il faut penser à supprimer.
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> irc_uneputaindeproc <span style="color: black;">{</span> s_nick s_uhost s_hand s_chan s_msg <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<span style="color: black;">(</span>un putain de code<span style="color: black;">)</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> uninstall <span style="color: black;">{</span> args <span style="color: black;">}</span> <span style="color: black;">{</span><br>		unbind PUBM - <span style="color: #483d8b;">"*"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">irc_uneputaindeproc</span><br>		unbind EVNT - <span style="color: #483d8b;">"prerehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">uninstall</span><br>&nbsp;<br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> delete <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> PUBM - <span style="color: #483d8b;">"*"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">irc_uneputaindeproc</span><br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> EVNT - <span style="color: #483d8b;">"prerehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">uninstall</span><br><span style="color: black;">}</span></pre>
+<p>Tellement simple qu'on se demande parfois pourquoi on ne le retrouve 
+pas partout.
+Cette technique à néanmoins un petit désavantage, si le script est un 
+jeu par exemple, toutes les informations à propos dudit jeu seront 
+supprimées à chaque rehash, ce qui, on le conçoit, peut sérieusement 
+perturber certaines parties (ce qui est d'autant plus important lorsque 
+l'enjeu est une cafetière).
+Et bien soit&nbsp;! Qu'à cela ne tienne trouvons une solution à cet 
+épineux problèmes&nbsp;:
+</p><p>On va ici utiliser une variable pour savoir si le script à été 
+rechargé ainsi que l'évènement "rehash" qui lui est appelé après un 
+rehash.
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<span style="color: #808080; font-style: italic;"># Variable témoin, pour savoir si le script à été rechargé,</span><br>	<span style="color: #808080; font-style: italic;"># elle est remise à 1 à chaque chargement du script.</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> b_loaded <span style="color: #ff4500;">1</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> irc_uneputaindeproc <span style="color: black;">{</span> s_nick s_uhost s_hand s_chan s_msg <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<span style="color: black;">(</span>un putain de code<span style="color: black;">)</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> evnt_prerehash <span style="color: black;">{</span> s_event <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/variable.htm"><span style="color: #ff7700;font-weight:bold;">variable</span></a> b_loaded<br>&nbsp;<br>		<span style="color: #808080; font-style: italic;"># On remet la variable à 0 avant chaque rehash.</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> b_loaded <span style="color: #ff4500;">0</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> evnt_rehash <span style="color: black;">{</span> s_event <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/variable.htm"><span style="color: #ff7700;font-weight:bold;">variable</span></a> b_loaded<br>&nbsp;<br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/if.htm"><span style="color: #ff7700;font-weight:bold;">if</span></a> <span style="color: black;">{</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/string.htm"><span style="color: #008000;">string</span></a> is false -strict <span style="color: #ff3333;">$b_loaded</span><span style="color: black;">]</span> <span style="color: black;">}</span> <span style="color: black;">{</span><br>			uninstall<br>		<span style="color: black;">}</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> uninstall <span style="color: black;">{</span> <span style="color: black;">}</span> <span style="color: black;">{</span><br>		unbind PUBM - <span style="color: #483d8b;">"*"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">irc_uneputaindeproc</span><br>		<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> EVNT - <span style="color: #483d8b;">"prerehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">evnt_prerehash</span><br>		<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> EVNT - <span style="color: #483d8b;">"rehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">evnt_rehash</span><br>&nbsp;<br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> delete <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span><br>	<span style="color: black;">}</span><br>&nbsp;<br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> PUBM - <span style="color: #483d8b;">"*"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">irc_uneputaindeproc</span><br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> EVNT - <span style="color: #483d8b;">"prerehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">evnt_prerehash</span><br>	<a href="http://www.eggdrop.fr/bind"><span style="color: #0000cd;">bind</span></a> EVNT - <span style="color: #483d8b;">"rehash"</span> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> current<span style="color: black;">]</span>::<span style="color: black;">evnt_rehash</span><br><span style="color: black;">}</span></pre>
+<p>Bon ça demande plus de code et un peu plus de TdC mais le résultat 
+est là, et c'est un peu adaptés dans certaines situations, remarquez que
+ si votre script se contente de vous rappeler d'aller faire du café dès 
+que vous entrez en PL alors la première méthode suffit amplement.
+</p>
+<h1> <span class="mw-headline" id="En_plein_dans_le_feu_de_l.27action_.21">En plein dans le feu de l'action&nbsp;!</span></h1>
+<p>(note&nbsp;: avec tout le café que vous allez ingurgiter, vous pourrez tenir toute la nuit&nbsp;!)
+</p><p>Bon là ça va plutôt être des petites astuces, des conseils, des 
+règles arbitraires et dépassées qu'il vous faudra impérativement suivre,
+ ce genre de joyeusetés&nbsp;!
+</p>
+<h2> <span class="mw-headline" id="Pendant_que_vous_commencez_.C3.A0_coder_.28en_buvant_le_caf.C3.A9.29">Pendant que vous commencez à coder (en buvant le café)</span></h2>
+<h3> <span class="mw-headline" id="80_.28caf.C3.A9s.29_-_Une_limite_.C3.A0_ne_pas_d.C3.A9passer">80 (cafés) - Une limite à ne pas dépasser</span></h3>
+<p>Vous avez peut être déjà entendu parler de la fameuse limite des 80 
+colonnes&nbsp;? Cette très ancienne règle stipule que dans un fichier 
+texte, il ne doit pas y avoir plus de 80 caractère par ligne. Cette 
+limitation provient des cartes perforées du début du siècle dernier dont
+ le format le plus répandu était celui ayant 80 caractères de largeur. 
+Inutile de dire que c'est l'une des plus anciennes règle arbitraire 
+jamais énoncée en programmation. Vous avez tout a fait le droit de ne 
+pas vous y conformer, ceci ne vous expose juste à être maudit jusqu'à la
+ 42ème génération par tout intégriste barbu qui code encore sur un 
+TRS-80. Le seul moyen de conjurer le sort étant de boire 1337 tasses de 
+café un soir de pleine lune à cheval sur un buste d'Ada Lovelace tout en
+ récitant la définition d'une machine de Turing.
+Pour éviter de vous retrouver dans cette très fâcheuse situation, je 
+vous donne ici quelques astuces.
+</p><p>Poursuivre une instruction sur plusieurs ligne&nbsp;:
+On utilise le caractère \ pour "échaper" le saut de ligne.
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/if.htm"><span style="color: #ff7700;font-weight:bold;">if</span></a> <span style="color: black;">{</span> <span style="color: black;">[</span>::<span style="color: black;">tcl</span>::<span style="color: black;">mathop</span>::&lt; <span style="color: #ff3333;">$i</span> <span style="color: #ff4500;">0</span> <span style="color: #ff4500;">1</span> <span style="color: #ff4500;">2</span> <span style="color: #ff4500;">3</span> <span style="color: #ff4500;">4</span> <span style="color: #ff4500;">5</span> <span style="color: #ff4500;">6</span> <span style="color: #ff4500;">7</span> <span style="color: #ff4500;">8</span> <span style="color: #ff4500;">9</span> <span style="color: #ff4500;">10</span> <span style="color: #ff4500;">11</span> <span style="color: #ff4500;">12</span> <span style="color: #ff4500;">13</span> <span style="color: #ff4500;">14</span> <span style="color: #ff4500;">15</span> <span style="color: #ff4500;">16</span> <span style="color: #ff4500;">17</span> <span style="color: #ff4500;">18</span> <span style="color: #ff4500;">19</span><span style="color: black;">]</span> \<br>	&amp;&amp; <span style="color: #ff3333;">$i</span> ne <span style="color: #483d8b;">""</span> <span style="color: black;">}</span> <span style="color: black;">{</span><br><span style="color: black;">}</span></pre>
+<p><br>
+Poursuivre une instructions sur plusieurs ligne en coupant en plein milieu d'une chaîne&nbsp;:
+On utilise concat afin de concaténer plusieurs chaîne ensemble, attention cependant à faire la coupure au niveau d'un espace.
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> s_msg <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #483d8b;">"blablalbalablablalbala blablalbala blablalbala blablalbala"</span> \<br>	<span style="color: #483d8b;">"blablalbala blablalbala"</span><span style="color: black;">]</span></pre>
+<pre class="tcl">$ <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #483d8b;">"a"</span> <span style="color: #483d8b;">"b"</span><br>-&gt; <span style="color: #483d8b;">"a b"</span> <span style="color: #808080; font-style: italic;"># Notez l'espace&nbsp;!</span><br>&nbsp;<br>$ <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #483d8b;">"a "</span> <span style="color: #483d8b;">"b"</span><br>-&gt; <span style="color: #483d8b;">"a b"</span> <span style="color: #808080; font-style: italic;"># Ici aucun espace n'a été ajouté.</span></pre>
+<p><br>
+Lorsque vous initialisez une liste avec des constantes&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> l_list <span style="color: black;">{</span><br>	<span style="color: #483d8b;">"aaaaaa"</span> <span style="color: #483d8b;">"bbbbb"</span> <span style="color: #483d8b;">"ccccc"</span> <span style="color: #483d8b;">"ddddd"</span> <span style="color: #483d8b;">"eeeee"</span> <span style="color: #483d8b;">"fffff"</span><br>	<span style="color: #483d8b;">"ggggg"</span> <span style="color: #483d8b;">"hhhhh"</span> <span style="color: #483d8b;">"jjjjj"</span> <span style="color: #483d8b;">"kkkkk"</span> <span style="color: #483d8b;">"lllll"</span> <span style="color: #483d8b;">"mmmmm"</span><br><span style="color: black;">}</span></pre>
+<p>Notez que dans ce cas précis vous n'avez pas besoin du caractère \
+</p><p><br>
+Une autre façon de faire aurait été&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> l_list <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/list.htm"><span style="color: #008000;">list</span></a> <span style="color: #483d8b;">"aaaaaa"</span> <span style="color: #483d8b;">"bbbbb"</span> <span style="color: #483d8b;">"ccccc"</span> <span style="color: #483d8b;">"ddddd"</span> <span style="color: #483d8b;">"eeeee"</span> <span style="color: #483d8b;">"fffff"</span> <span style="color: #483d8b;">"ggggg"</span> \<br>	<span style="color: #483d8b;">"hhhhh"</span> <span style="color: #483d8b;">"jjjjj"</span> <span style="color: #483d8b;">"kkkkk"</span> <span style="color: #483d8b;">"lllll"</span> <span style="color: #483d8b;">"mmmmm"</span><span style="color: black;">]</span></pre>
+<p>Vous pouvez prolonger une instruction sur autant de ligne que vous le souhaitez&nbsp;:
+</p>
+<pre class="tcl"><a href="http://www.eggdrop.fr/putlog"><span style="color: #0000cd;">putlog</span></a> <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/concat.htm"><span style="color: #008000;">concat</span></a> <span style="color: #483d8b;">"une information très longe qui prend tout un tas de place,"</span> \<br>	<span style="color: #483d8b;">"tellement que l'on est obligé de la prolonger sur un certain nombre de"</span> \<br>	<span style="color: #483d8b;">"lignes afin de respecter la règle des 80 colonnes, et d'éviter tout un"</span> \<br>	<span style="color: #483d8b;">"tas de petits désagrément mettant en scène un buste, une pleine lune"</span> \<br>	<span style="color: #483d8b;">"et une certaine malédiction"</span><span style="color: black;">]</span></pre>
+<p>Voilà vous avez entre les mains toute les connaissances nécessaires 
+pour vous foutre méchamment de la gueule de ceux qui dépassent les 80 
+colonnes&nbsp;:)
+</p>
+<h3> <span class="mw-headline" id="TCL_en_langage_qui_ne_poss.C3.A8de_pas_de_typage_.28.C3.A7a_c.27est.29_fort_.28de_caf.C3.A9.29">TCL en langage qui ne possède pas de typage (ça c'est) fort (de café) </span></h3>
+<p>Bon, vous aurrez remarqué que mes variable sont très étrangement 
+préfixées d'un "s_" énigmatique. J'en arrive à une deuxième règle très 
+importante à mes yeux puisqu'elle vous permet de remarque tout de suite 
+l'erreur typique du débutant, à savoir appliquer des fonction de string 
+sur des list et inversement. (MenzAgitat me signale que dans certains 
+cas c'est possible de façon légitime, ce en quoi il a toute a fait 
+raison, aussi veuillez ne pas tenir compte de sa remarque avant que je 
+n'ai modifié le tuto pour en parler plus en détail, et sauver les 
+apparences, tout ça...).
+Le principe est simple, si votre variable est destinée à contenir une 
+chaîne de caractère (string) préfixez là d'un "s_", si elle doit 
+contenir une liste d'un "l_", un tableau (array) "a_" un entier 
+(integer) "i_" ou un dictionnaire "d_", rien de très sorcier et ça 
+améliore vraiment la lisibilité de vos sources, c'est toujours bien d'en
+ parler quelque part au début de votre script, afin que les lecteurs 
+comprennent l'astuce et puisse en bénéficier eux aussi&nbsp;:)
+Exemple&nbsp;:
+</p>
+<pre class="tcl"><span style="color: #808080; font-style: italic;">################################################################################</span><br><span style="color: #808080; font-style: italic;">#                                  ATTENTION                                   #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;"># Vous n'avez pas besoin de modifier ce qui suit, à moins que vous ne          #</span><br><span style="color: #808080; font-style: italic;"># souhaitiez changer le comportement de ce script.                             #</span><br><span style="color: #808080; font-style: italic;">#------------------------------------------------------------------------------#</span><br><span style="color: #808080; font-style: italic;"># Tcl étant un langage non typé, il a été choisi de préfixer chaque variable   #</span><br><span style="color: #808080; font-style: italic;"># par le type de la valeur qu'elle contient&nbsp;:                                  #</span><br><span style="color: #808080; font-style: italic;">#  "s_" pour une chaîne de caractère (string)                                  #</span><br><span style="color: #808080; font-style: italic;">#  "i_" pour un entier (integer)                                               #</span><br><span style="color: #808080; font-style: italic;">#  "l_" pour une liste (list)                                                  #</span><br><span style="color: #808080; font-style: italic;">#  "d_" pour un dictionnaire (dict)                                            #</span><br><span style="color: #808080; font-style: italic;">#  "a_" pour un tableau (array)                                                #</span><br><span style="color: #808080; font-style: italic;">################################################################################</span><br><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<span style="color: #808080; font-style: italic;"># C'est toujours bien de mettre ceci pour être sur que la version de TCL</span><br>	<span style="color: #808080; font-style: italic;"># soit bien égale ou supérieure à 8.5</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/package.htm"><span style="color: #008000;">package</span></a> require Tcl <span style="color: #ff4500;">8.5</span><br>&nbsp;<br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> irc_uneputaindeproc <span style="color: black;">{</span> s_nick s_uhost s_hand s_chan s_msg <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/set.htm"><span style="color: #ff7700;font-weight:bold;">set</span></a> l_argument <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/split.htm"><span style="color: #008000;">split</span></a> <span style="color: #ff3333;">$s_msg</span> <span style="color: #483d8b;">" "</span><span style="color: black;">]</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/switch.htm"><span style="color: #ff7700;font-weight:bold;">switch</span></a> -exact -nocase -- <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/lindex.htm"><span style="color: #008000;">lindex</span></a> <span style="color: #ff3333;">$l_argument</span> <span style="color: #ff4500;">0</span><span style="color: black;">]</span> <span style="color: black;">{</span><br>			<span style="color: black;">(</span>des trucs pas interessants<span style="color: black;">)</span><br>		<span style="color: black;">}</span><br><span style="color: black;">}</span></pre>
+<pre class="tcl"><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/namespace.htm"><span style="color: #ff7700;font-weight:bold;">namespace</span></a> <a href="http://www.tcl.tk/man/tcl8.4/TclCmd/eval.htm"><span style="color: #ff7700;font-weight:bold;">eval</span></a> <span style="color: #483d8b;">"script"</span> <span style="color: black;">{</span><br>	<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/proc.htm"><span style="color: #ff7700;font-weight:bold;">proc</span></a> irc_uneputaindeproc <span style="color: black;">{</span> s_nick s_uhost s_hand s_chan s_msg <span style="color: black;">}</span> <span style="color: black;">{</span><br>		<a href="http://www.tcl.tk/man/tcl8.4/TclCmd/switch.htm"><span style="color: #ff7700;font-weight:bold;">switch</span></a> -exact -nocase -- <span style="color: black;">[</span><a href="http://www.tcl.tk/man/tcl8.4/TclCmd/lindex.htm"><span style="color: #008000;">lindex</span></a> <span style="color: #ff3333;">$s_msg</span> <span style="color: #ff4500;">0</span><span style="color: black;">]</span> <span style="color: black;">{</span><br>			<span style="color: #808080; font-style: italic;"># vous la voyez la grosse erreur sur la ligne juste au dessus&nbsp;?</span><br>			<span style="color: #808080; font-style: italic;"># si non, voyez un opticien, une fonction dont le nom commence par</span><br>			<span style="color: #808080; font-style: italic;"># un "l" appliquée à une chaîne franchement c'est moche&nbsp;!</span><br>			<span style="color: black;">(</span>des trucs pas interessants<span style="color: black;">)</span><br>		<span style="color: black;">}</span><br><span style="color: black;">}</span></pre>
+<p>N.B. J'aime pas le café en vrai, et puis <a href="http://www.nespresso.com/" class="external text" rel="nofollow">sapusaypalibre</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 158/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key eggdrop_wiki-wiki_:pcache:idhash:1590-0!*!0!!fr!*!edit=0 and timestamp 20120607001358 -->
+<div class="printfooter">
+Récupérée de « <a href="http://wiki.eggdrop.fr/Coder_proprement">http://wiki.eggdrop.fr/Coder_proprement</a> »</div>
+		<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://wiki.eggdrop.fr/Sp%C3%A9cial:Cat%C3%A9gories" title="Spécial:Catégories">Catégories</a>&nbsp;: <span dir="ltr"><a href="http://wiki.eggdrop.fr/Cat%C3%A9gorie:Tutoriels" title="Catégorie:Tutoriels">Tutoriels</a></span> | <span dir="ltr"><a href="http://wiki.eggdrop.fr/Cat%C3%A9gorie:Tcl" title="Catégorie:Tcl">Tcl</a></span></div><br><hr><a href="http://wiki.eggdrop.fr/Cat%C3%A9gorie:Tcl" title="Catégorie:Tcl">Tcl</a><br>
+<a href="http://wiki.eggdrop.fr/Cat%C3%A9gorie:Tcl" title="Catégorie:Tcl">Tcl</a> &gt; <a href="http://wiki.eggdrop.fr/Cat%C3%A9gorie:Tutoriels" title="Catégorie:Tutoriels">Tutoriels</a></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="http://wiki.eggdrop.fr/Coder_proprement" title="Voir la page de contenu [alt-c]" accesskey="c">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="http://wiki.eggdrop.fr/index.php?title=Discussion:Coder_proprement&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://wiki.eggdrop.fr/index.php?title=Coder_proprement&amp;action=edit" title="Cette page est protégée.
+Vous pouvez toutefois en visualiser la source. [alt-e]" accesskey="e">Voir le texte source</a></li>
+				 <li id="ca-history"><a href="http://wiki.eggdrop.fr/index.php?title=Coder_proprement&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [alt-h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-anonuserpage"><a href="http://wiki.eggdrop.fr/Utilisateur:78.129.54.188" title="La page utilisateur de l’IP avec laquelle vous contribuez [alt-.]" accesskey="." class="new">78.129.54.188</a></li>
+				<li id="pt-anontalk"><a href="http://wiki.eggdrop.fr/Discussion_utilisateur:78.129.54.188" title="La page de discussion pour les contributions depuis cette adresse IP [alt-n]" accesskey="n" class="new">Discussion avec cette adresse ip</a></li>
+				<li id="pt-anonlogin"><a href="http://wiki.eggdrop.fr/index.php?title=Sp%C3%A9cial:Connexion&amp;returnto=Coder_proprement" title="Vous êtes encouragé(e) à vous identifier ; ce n’est cependant pas obligatoire. [alt-o]" accesskey="o">Créer un compte ou se connecter</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(&quot;/skins/common/images/egg_transp.png&quot;);" href="http://wiki.eggdrop.fr/Accueil" title="Page principale"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-Navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://www.eggdrop.fr/" title="Visiter la page d’accueil du site [alt-z]" accesskey="z">Accueil</a></li>
+				<li id="n-currentevents"><a href="http://wiki.eggdrop.fr/Current_events" title="Trouver les informations de fond sur l’actualité du moment">Actualités</a></li>
+				<li id="n-Forum"><a href="http://www.eggdrop.fr/board/">Forum</a></li>
+				<li id="n-Canal-IRC"><a href="http://www.eggdrop.fr/board/chat.php">Canal IRC</a></li>
+				<li id="n-Scripts-Tcl"><a href="http://www.eggdrop.fr/board/downloads.php">Scripts Tcl</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input name="title" value="Spécial:Recherche" type="hidden">
+				<input id="searchInput" title="Rechercher dans ce wiki" accesskey="F" name="search" type="search">
+				<input name="go" class="searchButton" id="searchGoButton" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Rechercher" title="Rechercher les pages comportant ce texte." type="submit">
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte �  outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://wiki.eggdrop.fr/Sp%C3%A9cial:Pages_li%C3%A9es/Coder_proprement" title="Liste des pages liées à celle-ci [alt-j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="http://wiki.eggdrop.fr/Sp%C3%A9cial:Suivi_des_liens/Coder_proprement" title="Liste des modifications récentes des pages liées à celle-ci [alt-k]" accesskey="k">Suivi des pages liées</a></li>
+<li id="t-specialpages"><a href="http://wiki.eggdrop.fr/Sp%C3%A9cial:Pages_sp%C3%A9ciales" title="Liste de toutes les pages spéciales [alt-q]" accesskey="q">Pages spéciales</a></li>
+				<li id="t-print"><a href="http://wiki.eggdrop.fr/index.php?title=Coder_proprement&amp;printable=yes" rel="alternate" title="Version imprimable de cette page [alt-p]" accesskey="p">Version imprimable</a></li>				<li id="t-permalink"><a href="http://wiki.eggdrop.fr/index.php?title=Coder_proprement&amp;oldid=2642" title="Lien permanent vers cette version de la page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+<div class="portlet" id="p-adsense">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5597116564285042";
+/* vertical eggdrop */
+google_ad_slot = "4973489034";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="index_fichiers/show_ads.js"></script>
+</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://www.gnu.org/copyleft/fdl.html"><img src="index_fichiers/gnu-fdl.png" alt="GNU Free Documentation License 1.2" height="31" width="88"></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="index_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 7 janvier 2011 à 14:37.<br></li>
+		<li id="viewcount">Cette page a été consultée 2&nbsp;562 fois.</li>
+		<li id="copyright">Contenu disponible sous <a href="http://www.gnu.org/copyleft/fdl.html" class="external ">GNU Free Documentation License 1.2</a>.</li>
+		<li id="privacy"><a href="http://wiki.eggdrop.fr/Communaute_francophone_sur_les_Eggdrops:Privacy_policy" title="Communaute francophone sur les Eggdrops:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="http://wiki.eggdrop.fr/Communaute_francophone_sur_les_Eggdrops:%C3%80_propos" title="Communaute francophone sur les Eggdrops:À propos">À propos de Communaute francophone sur les Eggdrops</a></li>
+		<li id="disclaimer"><a href="http://wiki.eggdrop.fr/Communaute_francophone_sur_les_Eggdrops:Avertissements_g%C3%A9n%C3%A9raux" title="Communaute francophone sur les Eggdrops:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+
+<script src="index_fichiers/load_003.js"></script><script src="index_fichiers/load.js"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Coder_proprement", "wgTitle": "Coder proprement", "wgAction": "view", "wgArticleId": 1590, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 2642, "wgCategories": ["Tutoriels", "Tcl"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script><script type="text/javascript" src="index_fichiers/load_002.js"></script>
+
+<script src="index_fichiers/load_004.js"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 0.665 secs. --></body></html>
